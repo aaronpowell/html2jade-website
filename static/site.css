@@ -26,11 +26,14 @@ form {
 fieldset {
 	float:left;
 	border: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 fieldset.actions {
 	float: none;
-    width: 100%;
+    width: 380px;
+    text-align: center;
 }
 
 legend {
@@ -46,4 +49,16 @@ textarea {
 	border-radius: 5px;
 	width: 350px;
     height: 500px;
+}
+
+button {
+    background: transparent no-repeat scroll 0 0;
+    border: 0px;
+    width: 128px;
+    height: 128px;
+    text-indent: -999em;
+}
+
+.to-jade {
+    background-image: url(/img/right.png);
 }
