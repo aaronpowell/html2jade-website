@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "dependencies": {
         "express": ">=2.5.0",
-        "jade": ">=0.18.0"      
+        "jade": ">=0.18.0",
+        "html2jade": ">=0.1.0"
     }
 }
