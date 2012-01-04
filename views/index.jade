@@ -1,0 +1,16 @@
+h1 HTML to Jade converter
+
+form(method="post")
+    fieldset
+        legend HTML
+
+        label(for="html") HTML:
+            textarea(name="html", id="html")
+    
+    fieldset
+        legend Jade
+
+        label(for="jade") Jade:
+            textarea(name="jade", id="jade")
+
+    button(type="submit") Convert!
