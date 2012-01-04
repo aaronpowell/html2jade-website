@@ -1,8 +1,15 @@
 var express = require('express'),
-    html2jade = require('html2jade'),
     server = express.createServer(),
     pub = __dirname + '/static/',
-    views = __dirname + '/views';
+    views = __dirname + '/views',
+    html2jade;
+
+try {
+	html2jade = require('html2jade');
+} catch (err) {
+	console.log('Failure to load \'html2jade\' module');
+	html2jade = require('./node_modules/html2jade/lib/html2jade')
+}
 
 server.use(express.bodyParser());
 server.use(express.static(pub));
