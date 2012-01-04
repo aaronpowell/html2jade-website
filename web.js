@@ -4,16 +4,15 @@ var express = require('express'),
     views = __dirname + '/views'/*,
     html2jade = require('html2jade')*/;
 
-server.use(server.router);
 server.use(express.bodyParser());
 server.use(express.static(pub));
 server.set('view engine', 'jade');
 server.set('views', views);
 
 server.post('/convert', function (req, res) {
-	console.log(res);
+	console.log(req.body);
 
-	req.json('jade here');
+	res.json('jade here');
 });
 
 server.get('/', function (req, res) {
