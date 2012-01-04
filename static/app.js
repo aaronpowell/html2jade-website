@@ -12,6 +12,21 @@
         var html = form.find('#html').val();
 
         exports.convert(html, function (result) {
+            if (!/<html>/.test(html)) {
+                result.jade = result.jade
+                                .replace('html\n', '')
+                                .replace(/^\s\s/, '')
+                                .replace(/\n\s\s/, '\n');
+            }
+
+            if (!/<body>/.test(html)) {
+                result.jade = result.jade
+                                .replace(/.*body\n/, '')
+                                .replace(/^\s\s/, '')
+                                .replace(/\n\s\s/, '\n');
+            };
+
+
             form.find('#jade').val(result.jade);
         });
     });
