@@ -1,0 +1,49 @@
+html {
+	background: url(/img/background.png);
+	margin: 0px 20px;
+}
+
+body {
+  width: 778px;
+  margin: 0 auto;
+  padding: 15px 40px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #111;
+}
+
+h1 {
+	font-family: 'Acme', sans-serif;
+    text-align: center;
+}
+
+form {
+	overflow: hidden;
+	width: 100%;
+}
+
+fieldset {
+	float:left;
+	border: none;
+}
+
+fieldset.actions {
+	float: none;
+    width: 100%;
+}
+
+legend {
+	text-indent: -999em;
+    height: 0px;    
+}
+
+label {
+	display: block;
+}
+
+textarea {
+	border-radius: 5px;
+	width: 350px;
+    height: 500px;
+}
