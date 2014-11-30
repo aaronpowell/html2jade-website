@@ -1,9 +1,10 @@
 {
-    "name": "html2jade-site",
-    "version": "1.0.0",
-    "dependencies": {
-        "express": ">=2.5.0",
-        "jade": ">=0.18.0",
-        "html2jade": ">=0.1.0"
-    }
+  "name": "html2jade-site",
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "^1.9.3",
+    "express": "^5.0.0-alpha.1",
+    "html2jade": "^0.8.1",
+    "jade": "^1.8.0"
+  }
 }

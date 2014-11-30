@@ -1,7 +1,8 @@
 var express = require('express'),
-    server = express.createServer(),
+    server = express(),
     pub = __dirname + '/static/',
     views = __dirname + '/views',
+    bodyParser = require('body-parser'),
     html2jade;
 
 try {
@@ -11,7 +12,7 @@ try {
 	html2jade = require('./node_modules/html2jade/lib/html2jade')
 }
 
-server.use(express.bodyParser());
+server.use(bodyParser.urlencoded({ extended: false }));
 server.use(express.static(pub));
 server.set('view engine', 'jade');
 server.set('views', views);
@@ -25,7 +26,7 @@ server.post('/convert', function (req, res) {
 });
 
 server.get('/', function (req, res) {
-    res.render('index');
+    res.render('index.html');
 });
 
 server.listen(process.env.PORT || 9999);
