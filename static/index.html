@@ -8,20 +8,25 @@
     <meta name="author" content="Aaron Powell">
     <meta name="viewport" content="width=1024, user-scalable=no">
     <link href="/normalizer.css" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/theme/solarized.min.css" type="text/css" />
     <link href="/site.css" rel="stylesheet">
 </head>
 
 <body>
     <a href="http://github.com/aaronpowell/html2jade-website"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 50;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
     </a>
-    <h1>HTML to Jade converter</h1>
-    <h3>Powered by&nbsp;<a href="https://github.com/donpark/html2jade" title="html2jade" target="_blank">html2jade</a></h3>
-    <form method="post">
-        <fieldset>
-            <legend>HTML</legend>
-            <label for="html">HTML:</label>
-            <textarea name="html" id="html">
+    <header>
+        <h1>HTML to Jade converter</h1>
+        <h3>Powered by&nbsp;<a href="https://github.com/donpark/html2jade" title="html2jade" target="_blank">html2jade 0.8.1</a></h3>
+    </header>
+    <section role="main">
+        <form method="post">
+            <fieldset>
+                <legend>HTML</legend>
+                <label for="html">HTML:</label>
+                <textarea name="html" id="html">
 <!doctype html>
 <html>
 
@@ -35,25 +40,34 @@
 </body>
 
 </html>
-            </textarea>
-        </fieldset>
-        <fieldset>
-            <legend>Jade</legend>
-            <label for="jade">Jade:</label>
-            <textarea name="jade" id="jade"></textarea>
-        </fieldset>
-        <fieldset class="actions">
-            <button type="submit" class="to-jade">Convert!</button>
-        </fieldset>
-    </form>
-    <footer>A
-        <a href="http://jade-lang.com" title="Jade">Jade</a>&nbsp;+
-        <a href="http://github.com/aaronpowell/html2jade-website">GitHub</a>&nbsp;+
-        <a href="http://expressjs.com/">Express.js</a>&nbsp;+
-        <a href="http://heroku.com">Heroku</a>&nbsp;experiment by
-        <a href="http://aaron-powell.com">Aaron Powell</a>.
+                </textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Jade</legend>
+                <label for="jade">Jade:</label>
+                <textarea name="jade" id="jade"></textarea>
+            </fieldset>
+            <fieldset class="actions">
+                <button type="submit" class="to-jade">Convert!</button>
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <div>A
+            <a href="http://jade-lang.com" title="Jade">Jade</a>&nbsp;+
+            <a href="http://github.com/aaronpowell/html2jade-website">GitHub</a>&nbsp;+
+            <a href="http://expressjs.com/">Express.js</a>&nbsp;+
+            <a href="http://heroku.com">Heroku</a>&nbsp;experiment by
+            <a href="http://aaron-powell.com">Aaron Powell</a>.
+        </div>
     </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/codemirror.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/mode/xml/xml.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/mode/javascript/javascript.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/mode/css/css.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/mode/jade/jade.min.js"></script>
     <script src="/app.js"></script>
     <script type="text/javascript">
         var _gaq = _gaq || [];

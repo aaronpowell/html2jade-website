@@ -1,10 +1,14 @@
-html {
-	background: url(/img/background.png);
-	margin: 0px 20px;
+html, header {
+    background-color: #00a86b;
 }
 
 body {
-  width: 778px;
+    margin: 0px;
+    background-color: white;
+}
+
+section[role="main"], footer {
+  width: 1200px;
   margin: 0 auto;
   padding: 15px 40px;
   font-family: Helvetica, Arial, sans-serif;
@@ -13,8 +17,14 @@ body {
   color: #111;
 }
 
+header {
+    width: 100%;
+    padding-bottom: 25px;
+    color: white;
+}
+
 h1, h3 {
-	font-family: 'Acme', sans-serif;
+	font-family: 'Source Code Pro', sans-serif;
     text-align: center;
 }
 
@@ -47,11 +57,12 @@ legend {
 
 label {
 	display: block;
+	font-weight: bold;
 }
 
 textarea {
 	border-radius: 5px;
-	width: 350px;
+	width: 550px;
     height: 500px;
 }
 
@@ -67,7 +78,7 @@ button {
     background-image: url(/img/right.png);
 }
 
-footer {
+footer div {
     margin: 50px 0 30px;
     padding-top: 50px;
     font-size: 11px;
@@ -79,4 +90,10 @@ footer a:link,
 footer a:active,
 footer a:visited {
     color: #777;
+}
+
+.CodeMirror {
+    min-width: 550px;
+    border: 1px solid #000;
+    border-radius: 5px;
 }

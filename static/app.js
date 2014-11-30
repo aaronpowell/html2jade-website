@@ -27,7 +27,18 @@
             };
 
 
-            form.find('#jade').val(result.jade);
+            jade.setValue(result.jade);
         });
+    });
+    
+    CodeMirror.fromTextArea(document.getElementById("html"), {
+        styleActiveLine: true,
+        matchBrackets: true
+    });
+    
+    var jade = CodeMirror.fromTextArea(document.getElementById("jade"), {
+        styleActiveLine: true,
+        matchBrackets: true,
+        mode: 'jade'
     });
 }).call(window, window.app = {});
