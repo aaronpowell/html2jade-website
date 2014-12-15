@@ -9,7 +9,7 @@
         e.preventDefault();
 
         var form = $(this);
-        var html = form.find('#html').val();
+        var html = htmlEditor.getValue();
 
         exports.convert(html, function (result) {
             if (!/<html>/.test(html)) {
@@ -27,16 +27,16 @@
             };
 
 
-            jade.setValue(result.jade);
+            jadeEditor.setValue(result.jade);
         });
     });
     
-    CodeMirror.fromTextArea(document.getElementById("html"), {
+    var htmlEditor = CodeMirror.fromTextArea(document.getElementById("html"), {
         styleActiveLine: true,
         matchBrackets: true
     });
     
-    var jade = CodeMirror.fromTextArea(document.getElementById("jade"), {
+    var jadeEditor = CodeMirror.fromTextArea(document.getElementById("jade"), {
         styleActiveLine: true,
         matchBrackets: true,
         mode: 'jade'
